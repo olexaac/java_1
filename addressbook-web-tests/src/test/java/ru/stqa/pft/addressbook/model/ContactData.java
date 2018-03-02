@@ -8,12 +8,14 @@ public class ContactData {
   private final String lname;
   private final String city;
   private final String phone;
+  private String group;
 
-  public ContactData(String fname, String lname, String city, String phone) {
+  public ContactData(String fname, String lname, String city, String phone, String group) {
     this.fname = fname;
     this.lname = lname;
     this.city = city;
     this.phone = phone;
+    this.group = group;
   }
 
   public String getFname() {
@@ -30,6 +32,10 @@ public class ContactData {
 
   public String getPhone() {
     return phone;
+  }
+
+  public String getGroup() {
+    return group;
   }
 }
 
