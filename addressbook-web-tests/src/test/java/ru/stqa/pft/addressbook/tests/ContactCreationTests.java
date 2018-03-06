@@ -8,7 +8,7 @@ import ru.stqa.pft.addressbook.model.ContactData;
  */
 public class ContactCreationTests extends TestBase {
 
-  @Test
+  @Test (enabled = false)
   public void testContactCreation() {
     app.getContactHelper().initContactCreation();
     app.getContactHelper().fillContactForm(new ContactData("Test", "Testov", "Moscow", "+7(123)-456-78-90", "test1"), true);
