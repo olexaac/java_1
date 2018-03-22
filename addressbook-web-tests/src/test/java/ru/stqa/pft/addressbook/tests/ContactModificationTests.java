@@ -8,12 +8,14 @@ import ru.stqa.pft.addressbook.model.ContactData;
  */
 public class ContactModificationTests extends TestBase {
 
-  @Test (enabled = false)
+  @Test
   public void testContactModification(){
     app.goTo().gotoContactPage();
     app.getContactHelper().editContact();
-    app.getContactHelper().fillContactForm(new ContactData("Test", "Testov", "Moscow", "+7(123)-456-78-90", null), false);
+    app.getContactHelper().fillContactForm(
+            new ContactData().withFname("Test").withLname("Testov").withCity("Moscow").withPhone("+7(123)-456-78-90").withGroup(null), false);
     app.getContactHelper().submitContactModification();
     app.getContactHelper().returnToContactPage();
   }
 }
+
