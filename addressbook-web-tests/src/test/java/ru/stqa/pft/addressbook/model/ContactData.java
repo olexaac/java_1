@@ -71,9 +71,9 @@ public class ContactData {
   @Type(type = "text")
   private String photo;
 
-  public File getPhoto() {
-    return new File(photo);
-  }
+  //public File getPhoto() {
+    //return new File(photo);
+  //}
 
   public ContactData withPhoto(File photo) {
     this.photo = photo.getPath();
